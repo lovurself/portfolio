@@ -13,18 +13,7 @@
     font-weight: 400;
     font-style: normal;
 }
-@font-face {
-    font-family: 'Goyang';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Goyang.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
+
 
 /* 공통 */
 a {
@@ -44,6 +33,7 @@ h2 {
     color: #0d0d0d;
     margin-bottom: 1.0417vw;
     font-weight: bold;
+    font-family: 'ghanachoco';
 }
 
 /* 메뉴영역 */
@@ -165,6 +155,8 @@ nav.on {
 .home .text_box {
     width: 40%;
     position: relative;
+    box-sizing: border-box;
+    padding-left: 2.0417vw;
 }
 .home .text_box h1 div:first-child {
     font-family: 'ghanachoco';
@@ -498,118 +490,102 @@ nav.on {
     position: relative;
     overflow: hidden;
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     align-items: center;
 }
+
 .profile .left_box {
-    width: 60%;
+    width: 55%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding-left: 20.8333vw;
+    margin-left: 5.5625vw;
 }
-
-.profile .left_box p {
-    font-size: 1.25vw;
-    color: #555;
-    font-family: 'Pretendard-Regular';
-    line-height: 1.8333vw;
-    margin-left: 1.0417vw;
+.profile .left_box h2 {
+    margin-bottom: 3vw;
 }
-.profile .left_box p i {
-    margin-right: 0.5208vw;
-    color: #a36cd9;
-}
-
-.profile .left_box .skills .charts {
+.profile .left_box ul {
+    width: 90%;
+    height: 80%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-left: 1.0417vw;
 }
-.profile .left_box .skills .charts .chart {
-    position: relative;
-    margin-right: 2.6042vw;
+.profile .left_box ul li ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-.profile .left_box .skills .charts .chart h3 {
+.profile .left_box .about ul li ul li {
+    width: 100%;
+    font-size: 1.0417vw;
+    font-weight: bold;
+}
+.profile .left_box .about ul li {
+    width: 33%;
+    margin-left: 0.625vw;
+    box-sizing: border-box;
+}
+.profile .left_box .about ul li ul li:first-child {
+    font-size: 1.3vw;
+}
+.profile .left_box .about ul li ul li:first-child::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 0.1563vw;
+    background-color: #000;
+    margin: 0.5vw 0 1.0417vw;
+}
+.profile .left_box .skills ul li {
+    width: 16.666%;
+}
+.profile .left_box .skills ul li ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile .left_box .skills ul li ul li {
+    width: 90%;
     text-align: center;
-    margin-top: 0.5208vw;
+    font-size: 1.0417vw;
+    font-weight: bold;
 }
-.profile .left_box .skills .charts .chart h3::before {
-    content: "";
-    display: inline-block;
-    width: 1.0417vw;
-    height: 1.0417vw;
-    vertical-align: middle;
-    margin-right: 0.2604vw;
+.profile .left_box .skills ul li ul li:first-child {
+    height: 7.8125vw;
 }
-.profile .left_box .skills .charts .chart:nth-of-type(1) h3::before {
-    background: url(../images/photoshop_icon.png) center no-repeat;
+.profile .left_box .skills ul > li:nth-of-type(1) ul li:first-child {
+    background: url(../images/htmlImg.png) center no-repeat;
     background-size: 100% auto;
 }
-.profile .left_box .skills .charts .chart:nth-of-type(2) h3::before {
-    background: url(../images/illustrator_icon.png) center no-repeat;
+.profile .left_box .skills ul > li:nth-of-type(2) ul li:first-child {
+    background: url(../images/cssImg.png) center no-repeat;
     background-size: 100% auto;
 }
-.profile .left_box .skills .charts .chart:nth-of-type(3) h3::before {
-    background: url(../images/html_icon.png) center no-repeat;
+.profile .left_box .skills ul > li:nth-of-type(3) ul li:first-child {
+    background: url(../images/jsImg.png) center no-repeat;
     background-size: 100% auto;
 }
-.profile .left_box .skills .charts .chart:nth-of-type(4) h3::before {
-    background: url(../images/css_icon.png) center no-repeat;
+.profile .left_box .skills ul > li:nth-of-type(4) ul li:first-child {
+    background: url(../images/jqueryImg.png) center no-repeat;
     background-size: 100% auto;
 }
-.profile .left_box .skills .charts .chart:nth-of-type(5) h3::before {
-    background: url(../images/jquery_icon.png) center no-repeat;
+.profile .left_box .skills ul > li:nth-of-type(5) ul li:first-child {
+    background: url(../images/sassImg.png) center no-repeat;
     background-size: 100% auto;
 }
-.profile .left_box .skills .charts .chart p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -90%);
-    margin: 0;
-    color: #555;
-}
-.profile .left_box .skills .charts .chart svg {
-    width: 11.0417vw;
-    height: 11.0417vw;
-    line-height: 11.0417vw;
-}
-.profile .left_box .skills .charts .chart svg circle {
-    fill: rgba(255,255,255,0.5);
-    stroke-width: 15;
-    stroke-dasharray: 310;
-    stroke-dashoffset: 310;
-    /* animation: line 2s forwards; */
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
-    stroke-linecap: round;
+.profile .left_box .skills ul > li:nth-of-type(6) ul li:first-child {
+    background: url(../images/reactImg.svg) center no-repeat;
+    background-size: 100% auto;
 }
 
-.profile .left_box .skills .charts .chart:nth-of-type(1) svg circle {
-    stroke: #0b1e86;
-}
-.profile .left_box .skills .charts .chart:nth-of-type(2) svg circle {
-    stroke: #FCA503;
-}
-.profile .left_box .skills .charts .chart:nth-of-type(3) svg circle {
-    stroke: #fc4a03;
-}
-.profile .left_box .skills .charts .chart:nth-of-type(4) svg circle {
-    stroke: #038cfc;
-}
-.profile .left_box .skills .charts .chart:nth-of-type(5) svg circle {
-    stroke: #fcf803;
-}
 
 .profile .right_box {
     height: 100%;
     width: 30%;
     background-color: #0d0d0d;
-    position: absolute;
-    right: 0;
-    transition: all .8s;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -619,12 +595,12 @@ nav.on {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5.2083vw 0 0 20.2604vw;
+    margin-top: 5.2083vw;
 }
 .profile .right_box .line-scale > div {
     background-color: #a36cd9;
     width: 0.2083vw;
-    height: 30.2604vw;
+    height: 2.5vw;
     border-radius: 0.1042vw;
     margin: 0.1042vw;
     animation-fill-mode: both;
@@ -638,57 +614,65 @@ nav.on {
     animation-delay: -0.2s !important;
 }
 .profile .right_box .profile_img {
-    width: 15.625vw;
-    height: 15.625vw;
-    border-radius: 12.6042vw;
+    width: 60%;
+    height: 18.9656vw;
+    border-radius: 50%;
     background: url(../images/profile_img.jpg) no-repeat;
     background-size: 100% auto;
     background-position: top center;
     position: relative;
-    margin: 1.5625vw 0 2.6042vw 20.2604vw;
+    margin-top: 1.5625vw;
 }
-.profile .right_box h2 {
+.profile .right_box h3 {
+    font-size: 1.5625vw;
     color: #fff;
-    margin: 0 0 1.5625vw 20.2604vw;
+    margin: 2vw auto 2.5vw;
+    font-family: 'ghanachoco';
 }
-.profile .right_box .text_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20.2604vw;
-}
-.profile .right_box .text_box span {
-    display: inline-block;
-    color: #fff;
-    font-size: 1.25vw;
-    line-height: 2.5vw;
-    margin: 0 1.0417vw 1.5625vw 0;
-}
-.profile .right_box .introduce .file {
-    margin-bottom: 1.0417vw;
-}
-.profile .right_box .introduce .file a {
-    display: inline-block;
-    width: 10.4167vw;
-    height: 2.6042vw;
-    line-height: 2.6042vw;
-    border-radius: 1.0417vw;
-    border: 0.1042vw solid #a36cd9;
-    margin-left: 1.5625vw;
+.profile .right_box p {
+    font-size: 1.0417vw;
+    color: #d9d9d9;
     text-align: center;
-    color: #a36cd9;
-    font-size: 1.25vw;
-    font-family: 'Goyang';
-    transition: all .5s;
-}
-.profile .right_box .introduce .file a:first-child {
-    margin-left: 0;
-}
-.profile .right_box .introduce .file a:hover {
-    background-color: #a36cd9;
-    color: #fff;
+    line-height: 1.2vw;
 }
 
+@media (max-width: 768px) {
+    .profile .right_box p {
+        font-size: 0.3vw;
+        color: #d9d9d9;
+        text-align: center;
+        line-height: 1.5vw;
+    }
+}
+@media (max-width: 480px) {
+    .profile {
+        height: 130vw;
+        flex-direction: column-reverse;
+    }
+    .profile .right_box {
+        width: 100%;
+        height: 60%;
+        justify-content: center;
+    }
+    .profile .right_box .line-scale {
+        margin-top: 0;
+    }
+    .profile .right_box .profile_img {
+        width: 40.43%;
+        height: 50%;
+    }
+    .profile .right_box p {
+        line-height: 2.3vw;
+    }
+
+    .profile .left_box {
+        width: 80%;
+        height: 40%;
+    }
+    .profile .left_box .skills ul li ul li:first-child {
+        height: 12vw;
+    }
+}
 
 
 /* 디자인영역 */
