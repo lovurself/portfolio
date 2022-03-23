@@ -1,5 +1,6 @@
+// home영역 타자효과
 const target = document.querySelector('#textTyping');
-const string = '신입 프론트엔드 개발자 강민아입니다.';
+const string = '신입 웹퍼블리셔 강민아입니다.';
 const stringArr = string.split('');
 
 function textTyping(selectString) {
@@ -12,3 +13,76 @@ function textTyping(selectString) {
 }
 
 textTyping(stringArr);
+
+
+// 퍼블리싱영역 슬라이드 구현
+const slides = document.querySelector(".publishingSlider");
+const slide = document.querySelectorAll(".publishingSlider li");
+let currentId = 0;
+const slideCount = slide.length;
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+const slideWidth = 27.5521;
+const slideMargin = 0.8;
+
+// 새로 만든 slide를 합한 width를 구하기
+function updateWidth() {
+    let currentSlides = document.querySelectorAll('.slides li');
+    const newSlideCount = currentSlides.length;
+    const newWidth = (slideWidth + slideMargin) * newSlideCount - slideMargin + 'vw';
+    
+    slides.style.width = newWidth;
+}
+
+// 새로 만든 slide가 아닌 기존 slide를 중심으로 만들기
+function setInitialPos() {
+    let initialTranslateValue = -(slideWidth + slideMargin) * slideCount;
+    slides.style.transform = 'translateX(' + initialTranslateValue + 'vw)';
+}
+
+// 기존 slide 앞 뒤로 똑같은 slide를 더 추가해주기
+function makeClone() {
+    for (let i = 0; i < slideCount; i++) {
+        let cloneSlide = slide[i].cloneNode(true);
+        cloneSlide.classList.add('clone');
+        slides.appendChild(cloneSlide);
+    }
+    for (let i = slideCount -1; i >= 0; i--) {
+        let cloneSlide = slide[i].cloneNode(true);
+        cloneSlide.classList.add('clone');
+        slides.prepend(cloneSlide);
+    }
+    updateWidth();
+    setInitialPos();
+    setTimeout(function() {
+        slides.classList.add('animate');  
+    }, 100);
+}
+
+makeClone();
+
+// 무한 loop 슬라이드 구현
+function moveSlide(num) {
+  slides.style.left = -num * (slideWidth + slideMargin) + "vw";
+  currentId = num;
+  if (currentId === slideCount) {
+      setTimeout(function() {
+        slides.classList.remove('animate');
+        slides.style.left = '0vw';
+        currentId = 0;
+      }, 500);
+
+      setTimeout(function() {
+          slides.classList.add('animate');
+      }, 600);
+  }
+}
+
+// 버튼 클릭 시 이동하기
+prev.addEventListener("click", function () {
+    moveSlide(currentId - 1);
+});
+
+next.addEventListener("click", function () {
+    moveSlide(currentId + 1);
+});

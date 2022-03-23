@@ -1,621 +1,393 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>강민아</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <script src="https://kit.fontawesome.com/913e1645fa.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- <nav>
-        <a href="#home">HOME</a>
-        <p>Click the Menu <span>!</span></p>
-        <ul>
-            <li><a href="#profile" class="btn">Profile</a></li>
-            <li><a href="#design" class="btn">Design</a></li>
-            <li><a href="#publishing" class="btn">Publishing</a></li>
-            <li><a href="#contact" class="btn">Contact</a></li>
-        </ul>
-    </nav> -->
-
+  </head>
+  <body>
     <!-- 메인영역 -->
-    <div id="home" class="home">
-        <div class="text_box">
-            <h1>
-                <div>Welcome</div>
-                <div>to my Portfolio</div>
-            </h1>
-            <div id="textTyping"></div>
-            <div class="scroll_down">
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="chevron"></div>
-                <div class="text">Scroll down</div>
+    <section id="home" class="home">
+      <div class="text_box">
+        <h1>
+          <div>Welcome</div>
+          <div>to my Portfolio</div>
+        </h1>
+        <div id="textTyping"></div>
+        <div class="scroll_down">
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="text">Scroll down</div>
+        </div>
+      </div>
+      <div class="photo_box">
+        <ul>
+          <li>
+            <span style="--i: 1">H</span>
+            <span style="--i: 2">T</span>
+            <span style="--i: 3">L</span>
+            <span style="--i: 4">M</span>
+            <span style="--i: 5">5</span>
+            <div></div>
+          </li>
+          <li>
+            <span style="--i: 1">C</span>
+            <span style="--i: 2">S</span>
+            <span style="--i: 3">S</span>
+            <span style="--i: 4">3</span>
+            <div></div>
+          </li>
+          <li>
+            <div>
+              <p>Just do it</p>
             </div>
-        </div>
-        <div class="photo_box">
-            <ul>
-                <li>
-                    <span style="--i:1;">H</span>
-                    <span style="--i:2;">T</span>
-                    <span style="--i:3;">L</span>
-                    <span style="--i:4;">M</span>
-                    <span style="--i:5;">5</span>
-                    <div></div>
-                </li>
-                <li>
-                    <span style="--i:1;">C</span>
-                    <span style="--i:2;">S</span>
-                    <span style="--i:3;">S</span>
-                    <span style="--i:4;">3</span>
-                    <div></div>
-                </li>
-                <li>
-                    <div>
-                        <p>Just do it</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="img_box"></div>
-                </li>
-                <li>
-                    <span style="--i:1;">S</span>
-                    <span style="--i:2;">A</span>
-                    <span style="--i:3;">S</span>
-                    <span style="--i:4;">S</span>
-                    <div></div>
-                </li>
-                <li>
-                    <div>
-                        Hello
-                    </div>
-                </li>
-                <li>
-                    <span style="--i:1;">G</span>
-                    <span style="--i:2;">i</span>
-                    <span style="--i:3;">t</span>
-                    <span style="--i:4;">/</span>
-                    <span style="--i:5;">G</span>
-                    <span style="--i:6;">i</span>
-                    <span style="--i:7;">t</span>
-                    <span style="--i:8;">H</span>
-                    <span style="--i:9;">u</span>
-                    <span style="--i:10;">b</span>
-                    <div></div>
-                </li>
-                <li>
-                    <div class="img_box"></div>
-                </li>
-                <li>
-                    <span style="--i:1;">J</span>
-                    <span style="--i:2;">A</span>
-                    <span style="--i:3;">V</span>
-                    <span style="--i:4;">A</span>
-                    <span style="--i:5;">S</span>
-                    <span style="--i:6;">C</span>
-                    <span style="--i:7;">R</span>
-                    <span style="--i:8;">I</span>
-                    <span style="--i:9;">P</span>
-                    <span style="--i:10;">T</span>
-                    <div></div>
-                </li>
-                <li>
-                    <span style="--i:1;">R</span>
-                    <span style="--i:2;">E</span>
-                    <span style="--i:3;">A</span>
-                    <span style="--i:4;">C</span>
-                    <span style="--i:5;">T</span>
-                    <div></div>
-                </li>
-                <li>
-                    <div>
-                        950101&nbsp;
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
+          </li>
+          <li>
+            <div class="img_box"></div>
+          </li>
+          <li>
+            <span style="--i: 1">S</span>
+            <span style="--i: 2">A</span>
+            <span style="--i: 3">S</span>
+            <span style="--i: 4">S</span>
+            <div></div>
+          </li>
+          <li>
+            <div>Hello</div>
+          </li>
+          <li>
+            <span style="--i: 1">G</span>
+            <span style="--i: 2">i</span>
+            <span style="--i: 3">t</span>
+            <span style="--i: 4">/</span>
+            <span style="--i: 5">G</span>
+            <span style="--i: 6">i</span>
+            <span style="--i: 7">t</span>
+            <span style="--i: 8">H</span>
+            <span style="--i: 9">u</span>
+            <span style="--i: 10">b</span>
+            <div></div>
+          </li>
+          <li>
+            <div class="img_box"></div>
+          </li>
+          <li>
+            <span style="--i: 1">J</span>
+            <span style="--i: 2">A</span>
+            <span style="--i: 3">V</span>
+            <span style="--i: 4">A</span>
+            <span style="--i: 5">S</span>
+            <span style="--i: 6">C</span>
+            <span style="--i: 7">R</span>
+            <span style="--i: 8">I</span>
+            <span style="--i: 9">P</span>
+            <span style="--i: 10">T</span>
+            <div></div>
+          </li>
+          <li>
+            <span style="--i: 1">R</span>
+            <span style="--i: 2">E</span>
+            <span style="--i: 3">A</span>
+            <span style="--i: 4">C</span>
+            <span style="--i: 5">T</span>
+            <div></div>
+          </li>
+          <li>
+            <div>950101&nbsp;</div>
+          </li>
+        </ul>
+      </div>
+    </section>
 
     <!-- 프로필영역 -->
-    <div id="profile" class="profile">
-        <div class="left_box">
-            <div class="about">
-                <h2>&lt;About &#47;&gt;</h2>
-                <ul>
-                    <li>
-                        <ul>
-                            <li>Name.</li>
-                            <li>강민아</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li>Birth.</li>
-                            <li>95.01.01.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li>Address.</li>
-                            <li>부산광역시 기장군</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="skills">
-                <h2>&lt;Skills &#47;&gt;</h2>
-                <ul>
-                    <li>
-                        <ul>
-                            <li></li>
-                            <li>HTML5</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li></li>
-                            <li>CSS3</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li></li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li></li>
-                            <li>Jquery</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li></li>
-                            <li>SASS</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li></li>
-                            <li>React</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+    <section id="profile" class="profile">
+      <div class="left_box">
+        <div class="about">
+          <h2>&lt;About &#47;&gt;</h2>
+          <ul>
+            <li>
+              <ul>
+                <li>Name.</li>
+                <li>강민아</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>Birth.</li>
+                <li>95.01.01.</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>Address.</li>
+                <li>부산광역시 기장군</li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <div class="right_box">
-            <div class="line-scale">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="profile_img"></div>
-            <h3>Frontend developer</h3>
-            <p>
-                배우고 싶고 하고 싶은 것이 많아 <br>
-                한 가지 일에 특출나기보다 여러 분야를 넓고 <br>
-                다양하게 배우고 알아가고 있습니다. <br>
-                배워갈수록 끝없는 지식에 감탄하고 <br>
-                새로운 지식을 기대하며 끊임없이 발전하는 <br>
-                프론트엔드 개발자가 되고 싶습니다.
-            </p>
+        <div class="skills">
+          <h2>&lt;Skills &#47;&gt;</h2>
+          <ul>
+            <li>
+              <ul>
+                <li></li>
+                <li>HTML5</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li></li>
+                <li>CSS3</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li></li>
+                <li>JavaScript</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li></li>
+                <li>Jquery</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li></li>
+                <li>SASS</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li></li>
+                <li>React</li>
+              </ul>
+            </li>
+          </ul>
         </div>
-    </div>
-
-    <!-- 디자인영역 -->
-    <div id="design" class="design">
-        <div class="slider_wrap">
-            <ul class="design_slider">
-                <li>
-                    <div>
-                        <img src="images/design_img01.jpg" alt="">
-                        <div class="text">
-                            <i class="fas fa-sort-up"></i>
-                            <p>밀리의서재</p>
-                            <a data-fancybox href="images/design_img01.jpg">전체보기</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/design_img02.jpg" alt="">
-                        <div class="text">
-                            <i class="fas fa-sort-up"></i>
-                            <p>뉴발란스</p>
-                            <a data-fancybox href="images/design_img02.jpg">전체보기</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/design_img03.jpg" alt="">
-                        <div class="text">
-                            <i class="fas fa-sort-up"></i>
-                            <p>클리오</p>
-                            <a data-fancybox href="images/design_img03.jpg">전체보기</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/design_img04.jpg" alt="">
-                        <div class="text">
-                            <i class="fas fa-sort-up"></i>
-                            <p>포스코케미칼</p>
-                            <a data-fancybox href="images/design_img04.jpg">전체보기</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/design_img05.jpg" alt="">
-                        <div class="text">
-                            <i class="fas fa-sort-up"></i>
-                            <p>크리스마스 랜딩페이지</p>
-                            <a data-fancybox href="images/design_img05.jpg">전체보기</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/design_img06.jpg" alt="">
-                        <div class="text">
-                            <i class="fas fa-sort-up"></i>
-                            <p>코로나19예방 포스터</p>
-                            <a data-fancybox href="images/design_img06.jpg">전체보기</a>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="images/design_img07.jpg" alt="">
-                        <div class="text">
-                            <i class="fas fa-sort-up"></i>
-                            <p>부산 불꽃축제 포스터</p>
-                            <a data-fancybox href="images/design_img07.jpg">전체보기</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+      </div>
+      <div class="right_box">
+        <div class="line-scale">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <div class="background"></div>
-    </div>
+        <div class="profile_img"></div>
+        <h3>Web Publisher / Frontend developer</h3>
+        <p>
+          배우고 싶고 하고 싶은 것이 많아 <br />
+          한 가지 일에 특출나기보다 여러 분야를 넓고 <br />
+          다양하게 배우고 알아가고 있습니다. <br />
+          배워갈수록 끝없는 지식에 감탄하고 <br />
+          새로운 지식을 기대하며 끊임없이 발전하는 <br />
+          웹퍼블리셔를 넘어 프론트엔드 개발자가 되고 싶습니다.
+        </p>
+      </div>
+    </section>
 
     <!-- 퍼블리싱영역 -->
-    <div id="publishing" class="publishing">
-        <div class="slider_wrap">
-            <ul class="publishing_slider">
-                <li>
-                    <ul>
-                        <li>
-                            <div class="img_box">
-                                <div class="white_box">
-                                    <a href="http://lovurself.dothome.co.kr/kma/s1(renew)" target="_blank">WEB으로 보기</a>
-                                </div>
-                            </div>
-                            <div class="text">
-                                <h3><span>01</span>에스원</h3>
-                                <div>
-                                    <h4><i class="fas fa-code"></i>Program</h4>
-                                    <p>
-                                        <span>Photoshop</span>
-                                        <span>Illustrator</span>
-                                        <span>HTML5</span>
-                                        <span>CSS3</span>
-                                    </p>
-                                    <h4><i class="fas fa-code"></i>Date</h4>
-                                    <p>2021.08.05. / 2021.10.14.(2days)</p>
-                                    <h4><i class="fas fa-code"></i>Color</h4>
-                                    <p>
-                                        <span><em>#</em>293896</span>
-                                        <span><em>#</em>009dfc</span>
-                                    </p>
-                                </div>
-                            </div>                            
-                        </li>
-                        <li>
-                            <div class="text">
-                                <h3><span>02</span>동대문평화시장</h3>
-                                <div>
-                                    <h4><i class="fas fa-code"></i>Program</h4>
-                                    <p>
-                                        <span>Photoshop</span>
-                                        <span>Illustrator</span>
-                                        <span>HTML5</span>
-                                        <span>CSS3</span>
-                                        <span>JQuery</span>
-                                    </p>
-                                    <h4><i class="fas fa-code"></i>Date</h4>
-                                    <p>2021.08.09./2021.10.07.~08.(3days)</p>
-                                    <h4><i class="fas fa-code"></i>Color</h4>
-                                    <p>
-                                        <span><em>#</em>deb853</span>
-                                        <span><em>#</em>e06a4e</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="img_box">
-                                <div class="white_box">
-                                    <a href="http://lovurself.dothome.co.kr/kma/market" target="_blank">WEB으로 보기</a>
-                                </div>
-                            </div>                            
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <ul>
-                        <li>                            
-                            <div class="text">
-                                <h3><span>03</span>영남대학교</h3>
-                                <div>
-                                    <h4><i class="fas fa-code"></i>Program</h4>
-                                    <p>
-                                        <span>Photoshop</span>
-                                        <span>Illustrator</span>
-                                        <span>HTML5</span>
-                                        <span>CSS3</span>
-                                        <span>JQuery</span>
-                                    </p>
-                                    <h4><i class="fas fa-code"></i>Date</h4>
-                                    <p>2021.08.18./2021.10.12.~13.(3days)</p>
-                                    <h4><i class="fas fa-code"></i>Color</h4>
-                                    <p>
-                                        <span><em>#</em>3e4aa1</span>
-                                        <span><em>#</em>dbbd56</span>
-                                    </p>
-                                </div>
-                            </div>   
-                            <div class="img_box">
-                                <div class="white_box">
-                                    <a href="http://lovurself.dothome.co.kr/kma/university" target="_blank">WEB으로 보기</a>
-                                </div>
-                            </div>                         
-                        </li>
-                        <li>
-                            <div class="img_box">
-                                <div class="white_box">
-                                    <a href="http://lovurself.dothome.co.kr/kma/abc(renew)" target="_blank">WEB으로 보기</a>
-                                </div>
-                            </div>
-                            <div class="text">
-                                <h3><span>04</span>ABC성형외과의원</h3>
-                                <div>
-                                    <h4><i class="fas fa-code"></i>Program</h4>
-                                    <p>
-                                        <span>Photoshop</span>
-                                        <span>Illustrator</span>
-                                        <span>HTML5</span>
-                                        <span>CSS3</span>
-                                        <span>JQuery</span>
-                                    </p>
-                                    <h4><i class="fas fa-code"></i>Date</h4>
-                                    <p>2021.08.30.~31.(2days)</p>
-                                    <h4><i class="fas fa-code"></i>Color</h4>
-                                    <p>
-                                        <span><em>#</em>2a4699</span>
-                                        <span><em>#</em>3cbade</span>
-                                    </p>
-                                </div>
-                            </div>                            
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <ul>
-                        <li>
-                            <div class="img_box">
-                                <div class="white_box">
-                                    <a href="http://lovurself.dothome.co.kr/kma/jeongmall(renew)" target="_blank">WEB으로 보기</a>
-                                </div>
-                            </div>
-                            <div class="text">
-                                <h3><span>05</span>정관장몰</h3>
-                                <div>
-                                    <h4><i class="fas fa-code"></i>Program</h4>
-                                    <p>
-                                        <span>Photoshop</span>
-                                        <span>Illustrator</span>
-                                        <span>HTML5</span>
-                                        <span>CSS3</span>
-                                        <span>JQuery</span>
-                                    </p>
-                                    <h4><i class="fas fa-code"></i>Date</h4>
-                                    <p>2021.09.06.~07.(2days)</p>
-                                    <h4><i class="fas fa-code"></i>Color</h4>
-                                    <p>
-                                        <span><em>#</em>660b0b</span>
-                                        <span><em>#</em>c59952</span>
-                                    </p>
-                                </div>
-                            </div>                            
-                        </li>
-                        <li>                            
-                            <div class="text">
-                                <h3><span>06</span>닥터지</h3>
-                                <div>
-                                    <h4><i class="fas fa-code"></i>Program</h4>
-                                    <p>
-                                        <span>Photoshop</span>
-                                        <span>Illustrator</span>
-                                        <span>HTML5</span>
-                                        <span>CSS3</span>
-                                        <span>JQuery</span>
-                                    </p>
-                                    <h4><i class="fas fa-code"></i>Date</h4>
-                                    <p>2021.09.17./2021.09.23.(2days)</p>
-                                    <h4><i class="fas fa-code"></i>Color</h4>
-                                    <p>
-                                        <span><em>#</em>cae3c6</span>
-                                        <span><em>#</em>ffd85f</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="img_box">
-                                <div class="white_box">
-                                    <a href="http://lovurself.dothome.co.kr/kma/drg" target="_blank">WEB으로 보기</a>
-                                </div>
-                            </div>                            
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <ul>
-                        <li>                            
-                            <div class="text">
-                                <h3><span>07</span>헤지스</h3>
-                                <div>
-                                    <h4><i class="fas fa-code"></i>Program</h4>
-                                    <p>
-                                        <span>Photoshop</span>
-                                        <span>Illustrator</span>
-                                        <span>HTML5</span>
-                                        <span>CSS3</span>
-                                        <span>JQuery</span>
-                                    </p>
-                                    <h4><i class="fas fa-code"></i>Date</h4>
-                                    <p>2021.10.22./2021.10.25.~26.(3days)</p>
-                                    <h4><i class="fas fa-code"></i>Color</h4>
-                                    <p>
-                                        <span><em>#</em>3e4434</span>
-                                        <span><em>#</em>aeac9c</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="img_box">
-                                <div class="white_box">
-                                    <a href="http://lovurself.dothome.co.kr/kma/hazzys" target="_blank">WEB으로 보기</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="img_box">
-                                <div class="white_box">
-                                    <a href="http://lovurself.dothome.co.kr/kma/raemian" target="_blank">WEB으로 보기</a>
-                                </div>
-                            </div>
-                            <div class="text">
-                                <h3><span>08</span>래미안</h3>
-                                <div>
-                                    <h4><i class="fas fa-code"></i>Program</h4>
-                                    <p>
-                                        <span>Photoshop</span>
-                                        <span>Illustrator</span>
-                                        <span>HTML5</span>
-                                        <span>CSS3</span>
-                                        <span>JQuery</span>
-                                    </p>
-                                    <h4><i class="fas fa-code"></i>Date</h4>
-                                    <p>2021.10.27.~29.(3days)</p>
-                                    <h4><i class="fas fa-code"></i>Color</h4>
-                                    <p>
-                                        <span><em>#</em>003e47</span>
-                                        <span><em>#</em>009dad</span>
-                                    </p>
-                                </div>
-                            </div>                            
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+    <section id="publishing" class="publishing">
+      <h2>&lt;Publishing Project &#47;&gt;</h2>
+      <div class="publishingWrap">
+        <ul class="publishingSlider">
+          <li>
+            <div class="imgBox">
+              <img
+                src="images/publishing_img01.jpg"
+                alt="에스원 리뉴얼 페이지"
+              />
+            </div>
+            <div class="textBox">
+              <h4># 에스원 <span>2 days</span></h4>
+            </div>
+            <div class="btnWrap">
+              <a href="http://lovurself.dothome.co.kr/kma/s1" target="_blank">
+                <i class="fa-solid fa-house"></i>
+                Homepage
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="imgBox">
+              <img
+                src="images/publishing_img02.jpg"
+                alt="동대문평화시장 리뉴얼 페이지"
+              />
+            </div>
+            <div class="textBox">
+              <h4># 동대문평화시장 <span>2 days</span></h4>
+            </div>
+            <div class="btnWrap">
+              <a
+                href="http://lovurself.dothome.co.kr/kma/market"
+                target="_blank"
+              >
+                <i class="fa-solid fa-house"></i>
+                Homepage
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="imgBox">
+              <img
+                src="images/publishing_img03.jpg"
+                alt="영남대학교 리뉴얼 페이지"
+              />
+            </div>
+            <div class="textBox">
+              <h4># 영남대학교 <span>3 days</span></h4>
+            </div>
+            <div class="btnWrap">
+              <a
+                href="http://lovurself.dothome.co.kr/kma/university"
+                target="_blank"
+              >
+                <i class="fa-solid fa-house"></i>
+                Homepage
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="imgBox">
+              <img
+                src="images/publishing_img04.jpg"
+                alt="ABC성형외과의원 리뉴얼 페이지"
+              />
+            </div>
+            <div class="textBox">
+              <h4># ABC성형외과의원 <span>2 days</span></h4>
+            </div>
+            <div class="btnWrap">
+              <a
+                href="http://lovurself.dothome.co.kr/kma/abc(renew)"
+                target="_blank"
+              >
+                <i class="fa-solid fa-house"></i>
+                Homepage
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="imgBox">
+              <img
+                src="images/publishing_img05.jpg"
+                alt="정관장몰 리뉴얼 페이지"
+              />
+            </div>
+            <div class="textBox">
+              <h4># 정관장몰 <span>2 days</span></h4>
+            </div>
+            <div class="btnWrap">
+              <a
+                href="http://lovurself.dothome.co.kr/kma/jeongmall(renew)"
+                target="_blank"
+              >
+                <i class="fa-solid fa-house"></i>
+                Homepage
+              </a>
+            </div>
+          </li>
+          <li class="drg">
+            <div class="imgBox">
+              <img
+                src="images/publishing_img06.jpg"
+                alt="닥터지 리뉴얼 페이지"
+              />
+            </div>
+            <div class="textBox">
+              <h4># 닥터지 <span>2 days</span></h4>
+            </div>
+            <div class="btnWrap">
+              <a href="http://lovurself.dothome.co.kr/kma/drg" target="_blank">
+                <i class="fa-solid fa-house"></i>
+                Homepage
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="imgBox">
+              <img
+                src="images/publishing_img07.jpg"
+                alt="헤지스 리뉴얼 페이지"
+              />
+            </div>
+            <div class="textBox">
+              <h4># 헤지스 <span>3 days</span></h4>
+            </div>
+            <div class="btnWrap">
+              <a
+                href="http://lovurself.dothome.co.kr/kma/hazzys"
+                target="_blank"
+              >
+                <i class="fa-solid fa-house"></i>
+                Homepage
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="imgBox">
+              <img
+                src="images/publishing_img08.jpg"
+                alt="레미안 리뉴얼 페이지"
+              />
+            </div>
+            <div class="textBox">
+              <h4># 레미안 <span>3 days</span></h4>
+            </div>
+            <div class="btnWrap">
+              <a
+                href="http://lovurself.dothome.co.kr/kma/raemian"
+                target="_blank"
+              >
+                <i class="fa-solid fa-house"></i>
+                Homepage
+              </a>
+            </div>
+          </li>
+        </ul>
+        <div class="controller">
+          <button class="prev">&lt;</button>
+          <button class="next">&gt;</button>
         </div>
+      </div>
+    </section>
+
+    <!-- 스크립트영역 -->
+    <div id="script" class="script">
+      <div class="scriptWrap"></div>
     </div>
 
     <!-- 컨택트영역 -->
     <div id="contact" class="contact">
-        <h2># CONTACT</h2>
-        <div>
-            <div class="email">
-                <i class="far fa-envelope"></i>
-                <p>designer_lovurself@naver.com</p>
-            </div>
-            <div class="phone">
-                <i class="fas fa-mobile-alt"></i>
-                <p>010 - 4126 - 7527</p>
-            </div>
+      <h2>&lt;Contact &#47;&gt;</h2>
+      <div>
+        <div class="email">
+          <i class="far fa-envelope"></i>
+          <p>designer_lovurself@naver.com</p>
         </div>
-        <p>ⓒ 2021-3 KANGMINAH All Rights Reserved</p>
+        <div class="phone">
+          <i class="fas fa-mobile-alt"></i>
+          <p>010 - 4126 - 7527</p>
+        </div>
+      </div>
+      <p>ⓒ 2022 KANGMINAH All Rights Reserved</p>
     </div>
 
     <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.design_slider').bxSlider({
-                auto: true,
-                pager: false,
-                controls: true,
-                pause: 3000,
-                minSlides: 3,
-                maxSlides: 3,
-                moveSlides: 1,
-                slideWidth: 500,
-                slideMargin: 50,
-                autoHover: true,
-                touchEnabled: (navigator.maxTouchPoints > 0)
-            });
-
-            $('.publishing_slider').bxSlider({
-                pager: true,
-                controls: true,
-                touchEnabled: (navigator.maxTouchPoints > 0)
-            });
-
-            $(window).on("scroll", function(){
-                var sctop = $(this).scrollTop();
-                console.log(sctop);
-                if (sctop > 700) {
-                    $("nav").addClass("fixed");
-                } else {
-                    $("nav").removeClass("fixed");
-                }
-            });
-
-            var $w = $(window),
-            contactHei = $('.contact').outerHeight(),
-            $nav = $('nav');
-
-            $w.on('scroll', function () {
-
-            var sT = $w.scrollTop();
-            var val = $(document).height() - $w.height() - contactHei;
-
-            if (sT >= val)
-            $nav.addClass('on')
-            else
-            $nav.removeClass('on')
-
-            });
-
-            var div2 = document.getElementsByClassName("btn");
-
-            function handleClick(event) {
-
-            if (event.target.classList[1] === "clicked") {
-            event.target.classList.remove("clicked");
-            } else {
-            for (var i = 0; i < div2.length; i++) { div2[i].classList.remove("clicked"); }
-                event.target.classList.add("clicked"); } } function init() { for (var i=0; i < div2.length; i++) {
-                div2[i].addEventListener("click", handleClick); } } init();
-        });
-
-        $(window).on("scroll", function(){
-                var sctop = $(this).scrollTop();
-                console.log(sctop);
-                if (sctop > 1200) {
-                    $(".background").addClass("ani");
-                } else {
-                    $(".background").removeClass("ani");
-                }
-            });
-    </script>
-</body>
+  </body>
 </html>
