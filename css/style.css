@@ -530,18 +530,29 @@ h2 {
     font-family: 'ghanachoco';
 }
 .profile .right_box p {
+    width: 80%;
     font-size: 1.0417vw;
     color: #d9d9d9;
     text-align: center;
-    line-height: 1.2vw;
+    line-height: 1.45vw;
 }
 
 @media (max-width: 768px) {
-    .profile .right_box p {
-        font-size: 0.3vw;
-        color: #d9d9d9;
+    .profile .right_box h3 {
         text-align: center;
-        line-height: 1.5vw;
+    }
+    .profile .right_box h3 span {
+        display: block;
+        margin-top: 0.4vw;
+    }
+    .profile .right_box p {
+        width: 75%;
+        height: 7.8125vw;
+        font-size: 1vw;
+        line-height: 1.55vw;
+    }
+    .profile .right_box p span {
+        display: none;
     }
 }
 @media (max-width: 480px) {
@@ -562,7 +573,8 @@ h2 {
         height: 50%;
     }
     .profile .right_box p {
-        line-height: 2.3vw;
+        width: 71%;
+        line-height: 2.7vw;
     }
 
     .profile .left_box {
@@ -696,8 +708,55 @@ h2 {
     box-shadow: none;
 }
 
-/* 스크립트영역 */
+@media (max-width: 768px) {
+    .publishing .publishingWrap .publishingSlider li {
+        width: 30vw;
+        margin-right: 0.49vw;
+    }
+    .publishing .publishingWrap .publishingSlider li .btnWrap a {
+        font-size: 0.8vw;
+    }
+    .publishing .publishingWrap .publishingSlider li .btnWrap a span {
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .publishing {
+        height: 80vw;
+    }
+    .publishing h2 {
+        margin: 10vw auto 3vw;
+    }
+    .publishing .publishingWrap .publishingSlider li {
+        width: 69.6875vw;
+        margin-right: 12.8vw;
+    }
+    .publishing .publishingWrap .publishingSlider li .textBox h4 {
+        text-align: center;
+        font-size: 3.5vw;
+        margin: 3vw 0 3.5vw;
+    }
+    .publishing .publishingWrap .controller button {
+        width: 5vw;
+        height: 5vw;
+        font-size: 3vw;
+    }
+    .publishing .publishingWrap .publishingSlider li .btnWrap a {
+        width: 35%;
+        height: 3.5vw;
+        line-height: 3.5vw;
+    }
+    .publishing .publishingWrap .publishingSlider li .btnWrap a span {
+        display: inline;
+    }
+}
 
+
+/* 스크립트영역 */
+.script {
+    height: 50vw;
+    background-color: #c5a7d9;
+}
 
 /* 컨택트영역 */
 .contact {
