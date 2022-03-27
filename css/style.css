@@ -738,11 +738,6 @@ h2 {
         font-size: 3.5vw;
         margin: 3vw 0 3.5vw;
     }
-    .publishing .publishingWrap .controller button {
-        width: 5vw;
-        height: 5vw;
-        font-size: 3vw;
-    }
     .publishing .publishingWrap .publishingSlider li .btnWrap a {
         width: 35%;
         height: 3.5vw;
@@ -750,6 +745,14 @@ h2 {
     }
     .publishing .publishingWrap .publishingSlider li .btnWrap a span {
         display: inline;
+    }
+    .publishing .publishingWrap .controller {
+        bottom: 5.5vw;
+    }
+    .publishing .publishingWrap .controller button {
+        width: 5vw;
+        height: 5vw;
+        font-size: 3vw;
     }
 }
 
@@ -783,10 +786,9 @@ h2 {
     background-color: #f8f9fa;
 }
 .script .scriptWrap ul li .video {
-    width: 85%;
+    height: 105%;
     position: absolute;
-    top: -0.5vw;
-    left: -0.5vw;
+    top: -0.2vw;
 }
 .script .scriptWrap ul li .rightWhiteBox {
     width: 30%;
@@ -861,38 +863,92 @@ h2 {
 
 /* 컨택트영역 */
 .contact {
-    height: 15.625vw;
+    height: 23vw;
     background-color: #2e2e2e;
     color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    overflow: hidden;
 }
 .contact h2 {
+    width: 81%;
+    margin: 4vw auto 3vw;
     color: #fff;
 }
-.contact > div {
+.contact .contactWrap {
     width: 50%;
+    height: 5vw;
+    margin: 0 auto 5vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.contact > div > div {
+.contact .contactWrap > div {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.contact .contactWrap div > div {
     display: flex;
     align-items: center;
 }
-.contact > div > div i {
+.contact .contactWrap div > a {
+    font-size: 1.5833vw;
+    color: #b9b9b9;
+}
+.contact .contactWrap div > a i {
     color: #a36cd9;
-    font-size: 2rem;
+    font-size: 1.6667vw;
     margin-right: 1.0417vw;
 }
-.contact > div > div p {
-    font-size: 1.9rem;
+.contact .contactWrap > div > div i {
+    color: #a36cd9;
+    font-size: 1.6667vw;
+    margin-right: 1.0417vw;
+}
+.contact .contactWrap > div > div p {
+    font-size: 1.5833vw;
     color: #b9b9b9;
 }
 .contact > p {
-    font-size: 0.875rem;
+    font-size: 0.7292vw;
     color: #ccc;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    
+}
+@media (max-width: 480px) {
+    .contact {
+        height: 50vw;
+    }
+    .contact h2 {
+        font-size: 5vw;
+        text-align: center;
+        margin: 8vw auto 5vw;
+    }
+    .contact .contactWrap {
+        flex-direction: column;
+        height: 20vw;
+    }
+    .contact .contactWrap > div {
+        width: 70%;
+        margin-bottom: 2vw;
+    }
+    .contact .contactWrap div > a {
+        font-size: 3vw;
+    }
+    .contact .contactWrap div > a i {
+        font-size: 3.2vw;
+    }
+    .contact .contactWrap > div > div i {
+        font-size: 3.2vw;
+    }
+    .contact .contactWrap > div > div p {
+        font-size: 3vw;
+    }
 }
 
 
