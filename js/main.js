@@ -15,6 +15,15 @@ function textTyping(selectString) {
 textTyping(stringArr);
 
 
+// menu modal 구현
+const menuIcon = document.getElementById('menuIcon');
+const menuList = document.getElementById('menuList');
+
+menuIcon.addEventListener('click', function() {
+    menuList.classList.toggle('modal');
+})
+
+
 // 퍼블리싱영역 슬라이드 구현
 const slides = document.querySelector(".publishingSlider");
 const slide = document.querySelector(".slide");
